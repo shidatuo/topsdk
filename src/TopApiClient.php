@@ -11,7 +11,7 @@ class TopApiClient
 
     public $secretKey;
 
-    public $gatewayUrl = '';
+    public $gatewayUrl = 'http://gw.api.taobao.com/router/rest';
 
     public $format = 'json';
 
@@ -34,10 +34,12 @@ class TopApiClient
         return $this->appkey;
     }
 
-    public function __construct(string $appkey, string $secretKey, string $gatewayUrl,int $connectTimeout = 30000,int $readTimeout = 30000){
+    public function __construct(string $appkey, string $secretKey, string $gatewayUrl = '',int $connectTimeout = 30000,int $readTimeout = 30000){
         $this->appkey = $appkey;
         $this->secretKey = $secretKey;
-        $this->gatewayUrl = $gatewayUrl;
+        // 根据域名调用不同环境
+        if(!empty($gatewayUrl))
+            $this->gatewayUrl = $gatewayUrl;
         $this->connectTimeout = $connectTimeout;
         $this->readTimeout = $readTimeout;
     }
