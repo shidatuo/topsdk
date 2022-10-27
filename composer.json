@@ -1,0 +1,21 @@
+{
+    "name": "unidesk/taobao-top-sdk",
+    "description": "unidesk相关api",
+    "type": "library",
+    "autoload": {
+        "psr-4": {
+            "Topsdk\\Topapi\\": "src/"
+        }
+    },
+    "require": {
+        "php":">=7.*"
+    },
+    "authors": [
+        {
+            "name": "zhouwang",
+            "email": "1003230257@qq.com",
+            "homepage": "https://github.com/shidatuo"
+        }
+    ],
+    "minimum-stability": "dev"
+}
