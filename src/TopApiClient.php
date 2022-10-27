@@ -3,7 +3,6 @@
 namespace Topsdk\Topapi;
 
 use Exception;
-use topsdk\topapi\TopUtil;
 
 class TopApiClient
 {
